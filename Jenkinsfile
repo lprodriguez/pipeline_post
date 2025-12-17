@@ -59,14 +59,4 @@ pipeline {
                 sh 'docker cp $WORKSPACE/tomcat-web/. tomcat1:/usr/local/tomcat/webapps'
             }
         }
-        post {
-            success {
-                // One or more steps need to be included within each condition's block.
-                echo 'the deployment has worked'
-           }
-           failure {
-                // One or more steps need to be included within each condition's block.
-                echo 'An error has ocurred'
-          }
-     }
 }
