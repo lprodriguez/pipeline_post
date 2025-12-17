@@ -63,7 +63,8 @@ pipeline {
     post {
           always {
             // One or more steps need to be included within each condition's block.
-              echo 'este proceso siempre se ejecuta'
+              echo 'este proceso siempre se ejecuta, aunque el proceso falle'
+              cleanWs()
           }
           cleanup {
             // One or more steps need to be included within each condition's block.
