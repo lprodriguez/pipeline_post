@@ -56,7 +56,7 @@ pipeline {
         }
         stage('Copy web files into container') {
             steps {
-                sh 'docker cp $WORKSPACE/tomcat-web/. tomcat1:/usr/local/tomcat/webapps'
+                sh 'docker cp $WORKSPACE/shopping/. tomcat1:/usr/local/tomcat/webapps/shopping'
             }
         }
     }
