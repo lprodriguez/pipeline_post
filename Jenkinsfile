@@ -64,7 +64,6 @@ pipeline {
           always {
             // One or more steps need to be included within each condition's block.
               echo 'este proceso siempre se ejecuta, aunque el proceso falle'
-              cleanWs()
           }
           cleanup {
             // One or more steps need to be included within each condition's block.
@@ -73,6 +72,8 @@ pipeline {
           success {
             // One or more steps need to be included within each condition's block.
               echo 'success process'
+              archiveArtifacts allowEmptyArchive: true, artifacts: '', excludes: 'shopping/*.jsp', followSymlinks: false
+              cleanWs()
           }
           failure {
             // One or more steps need to be included within each condition's block.
