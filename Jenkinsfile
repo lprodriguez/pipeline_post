@@ -51,7 +51,7 @@ pipeline {
         stage('Create the Tomcat container') {
             steps {
             echo 'Creating the container...'
-            sh 'docker run -dit --name tomcat1 -p 9090:8080  -v $WORKSPACE/tomcat-web:/usr/local/tomcat/webapps tomcat:9.0'
+            sh 'docker run -dit --name tomcat1 -p 9091:8080  -v $WORKSPACE/tomcat-web:/usr/local/tomcat/webapps tomcat:9.0'
             }
         }
         stage('Copy web files into container') {
