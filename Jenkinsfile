@@ -59,4 +59,5 @@ pipeline {
                 sh 'docker cp $WORKSPACE/tomcat-web/. tomcat1:/usr/local/tomcat/webapps'
             }
         }
+    }
 }
