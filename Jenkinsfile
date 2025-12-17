@@ -72,7 +72,7 @@ pipeline {
           success {
             // One or more steps need to be included within each condition's block.
               echo 'success process'
-              archiveArtifacts allowEmptyArchive: true, artifacts: '', excludes: 'shopping/*.jsp', followSymlinks: false
+              archiveArtifacts allowEmptyArchive: true, artifacts: 'shopping/*.jsp', followSymlinks: false
               cleanWs()
           }
           failure {
