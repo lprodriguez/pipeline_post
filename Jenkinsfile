@@ -58,6 +58,20 @@ pipeline {
             steps {
                 sh 'docker cp $WORKSPACE/shopping/. tomcat1:/usr/local/tomcat/webapps/shopping'
             }
-        }
+        }    
+    }
+    post {
+          cleanup {
+            // One or more steps need to be included within each condition's block.
+              echo 'cleanup process'
+          }
+          success {
+            // One or more steps need to be included within each condition's block.
+              echo 'success process'
+          }
+          failure {
+            // One or more steps need to be included within each condition's block.
+              echo 'failure process'
+          }
     }
 }
