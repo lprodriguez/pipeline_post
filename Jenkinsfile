@@ -61,6 +61,10 @@ pipeline {
         }    
     }
     post {
+          allways {
+            // One or more steps need to be included within each condition's block.
+              echo 'este proceso siempre se ejecuta'
+          }
           cleanup {
             // One or more steps need to be included within each condition's block.
               echo 'cleanup process'
